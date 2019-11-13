@@ -20,16 +20,16 @@ class CalculateBitwiseService implements CalculateServiceInterface
         $this->validator->validate($value1, $value2);
 
         switch ($operator) {
-            case 'AND':
-                return $value1 & $value2;
+        case 'AND':
+            return $value1 & $value2;
                 break;
 
-            case 'OR':
-                return $value1 | $value2;
+        case 'OR':
+            return $value1 | $value2;
                 break;
 
-            default:
-                throw new \Exception('There is more bitwise operators, but we are presenting only these.');
+        default:
+            throw new \Exception('There is more bitwise operators, but we are presenting only these.');
                 break;
         }
     }

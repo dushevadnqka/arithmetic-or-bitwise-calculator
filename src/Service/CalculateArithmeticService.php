@@ -24,24 +24,24 @@ class CalculateArithmeticService implements CalculateServiceInterface
         $this->actionValidator->validate($value2, $operator);
 
         switch ($operator) {
-            case '+':
-                return $value1 + $value2;
+        case '+':
+            return $value1 + $value2;
                 break;
 
-            case '-':
-                return $value1 - $value2;
+        case '-':
+            return $value1 - $value2;
                 break;
 
-            case '*':
-                return $value1 * $value2;
+        case '*':
+            return $value1 * $value2;
                 break;
 
-            case '/':
-                return $value1 / $value2;
+        case '/':
+            return $value1 / $value2;
                 break;
 
-            default:
-                throw new \Exception('There is more arithmetic operators, but we are presenting only these.');
+        default:
+            throw new \Exception('There is more arithmetic operators, but we are presenting only these.');
                 break;
         }
     }
