@@ -19,11 +19,12 @@ class CalculatorController extends AbstractController
     public function index(Request $request): Response
     {
         return $this->render(
-            'calculator/index.html.twig', [
-            'controller_name' => 'This is a TechPods - Calculator',
-            'operators' => array_merge(Operator::ARITHMETIC_OPERATORS, Operator::BITWISE_OPERATORS),
-            'result' => $request->query->get('result'),
-            'error' => $request->query->get('error'),
+            'calculator/index.html.twig',
+            [
+                'controller_name' => 'This is a tech - schmucks calculator',
+                'operators' => array_merge(Operator::ARITHMETIC_OPERATORS, Operator::BITWISE_OPERATORS),
+                'result' => $request->query->get('result'),
+                'error' => $request->query->get('error'),
             ]
         );
     }
